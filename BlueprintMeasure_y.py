@@ -63,6 +63,10 @@ def main():
                 distance = float(null02name[c4d.ID_BASEOBJECT_REL_POSITION,c4d.VECTOR_Y])
                 distanceinput = float(c4d.gui.InputDialog("Set Distance").replace(',','.'))
 
+                #added by J Garcia
+                if distance < 0:
+                    distance = distance * -1
+
                 factor = distance/distanceinput
                 width = op[c4d.PRIM_PLANE_WIDTH]
 
