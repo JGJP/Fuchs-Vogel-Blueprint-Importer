@@ -67,6 +67,7 @@ def main():
                 distance = abs(distance)
 
                 factor = distance/distanceinput
+                gui.RenameDialog(factor)
                 width = op[c4d.PRIM_PLANE_WIDTH]
 
                 height = op[c4d.PRIM_PLANE_HEIGHT]

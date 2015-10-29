@@ -67,6 +67,7 @@ def main():
                 distance = abs(distance)
                 
                 factor = distance/distanceinput
+                gui.RenameDialog(factor)
                 width = op[c4d.PRIM_PLANE_WIDTH]
 
                 height = op[c4d.PRIM_PLANE_HEIGHT]
@@ -84,16 +85,19 @@ def main():
                 doc.AddUndo(c4d.UNDOTYPE_CHANGE,null02name)
                 null02name[c4d.ID_BASEOBJECT_REL_POSITION,c4d.VECTOR_X] = distance/factor
                 null02name[c4d.NULLOBJECT_RADIUS] = null02name[c4d.NULLOBJECT_RADIUS]/factor
+
+                null01[c4d.ID_BASELIST_NAME] = "test"
                 
                 doc.EndUndo()
+
+                
                 
                 
             else:
                 gui.MessageDialog("Select the image plane.")
         else:
             gui.MessageDialog("Select the image plane.")
-    
-    
+
     
     c4d.EventAdd()
 
