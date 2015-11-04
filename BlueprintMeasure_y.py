@@ -44,9 +44,6 @@ def main():
         c4d.CallCommand(100004802) # Unfold Selected
         
         # Create protection tags
-        pronull01 = null01.MakeTag(c4d.Tprotection)
-        pronull01[c4d.PROTECTION_P_X]=False
-        pronull01[c4d.PROTECTION_P_Y]=False
         
         pronull02 = null02.MakeTag(c4d.Tprotection)
         pronull02[c4d.PROTECTION_P_Y]=False
